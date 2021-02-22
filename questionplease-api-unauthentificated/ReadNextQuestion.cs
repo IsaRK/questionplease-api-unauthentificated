@@ -47,7 +47,7 @@ namespace questionplease_api_unauthentificated
                 int randomNumber = rnd.Next(1, nbOfQuestion);
 
                 QueryDefinition getQuestionWithId = new QueryDefinition("SELECT * FROM questions q WHERE q.id=@id")
-                    .WithParameter("@id", randomNumber);
+                    .WithParameter("@id", randomNumber.ToString());
 
                 var result = new List<Question>();
                 using (FeedIterator<Question> feedIterator = _questionContainer.GetItemQueryIterator<Question>(getQuestionWithId))
