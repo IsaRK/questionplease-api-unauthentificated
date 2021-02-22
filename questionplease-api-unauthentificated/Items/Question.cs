@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Linq;
 using System.Net;
 
 namespace questionplease_api_unauthentificated.Items
@@ -11,10 +12,18 @@ namespace questionplease_api_unauthentificated.Items
         [JsonProperty(PropertyName = "question")]
         public string FullQuestion { get; set; }
 
+        [JsonProperty(PropertyName = "answers")]
+        public string[] Answers { get; set; }
+
         public ReturnedQuestion(Question question)
         {
             this.Id = question.Id;
             this.FullQuestion = WebUtility.HtmlDecode(question.FullQuestion);
+
+            var allAnswers = question.IncorrectAnswers.ToList();
+            allAnswers.Add(question.CorrectAnswer);
+            allAnswers.Shuffle();
+            this.Answers = allAnswers.ToArray();
         }
     }
 
