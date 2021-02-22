@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "questionplease-api-unauthentificated", "questionplease-api-unauthentificated\questionplease-api-unauthentificated.csproj", "{ECCDC471-3E0C-47EF-8A32-C6D0EDBE31D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECCDC471-3E0C-47EF-8A32-C6D0EDBE31D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCDC471-3E0C-47EF-8A32-C6D0EDBE31D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCDC471-3E0C-47EF-8A32-C6D0EDBE31D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCDC471-3E0C-47EF-8A32-C6D0EDBE31D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CB76477-8F73-413E-8E99-BE1DE82B2107}
+	EndGlobalSection
+EndGlobal
