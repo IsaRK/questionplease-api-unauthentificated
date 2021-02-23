@@ -22,6 +22,7 @@ namespace questionplease_api_unauthentificated.Items
 
             var allAnswers = question.IncorrectAnswers.ToList();
             allAnswers.Add(question.CorrectAnswer);
+            allAnswers.ForEach(ans => ans = WebUtility.HtmlDecode(ans));
             allAnswers.Shuffle();
             this.Answers = allAnswers.ToArray();
         }
