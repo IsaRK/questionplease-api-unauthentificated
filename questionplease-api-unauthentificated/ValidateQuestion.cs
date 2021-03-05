@@ -11,6 +11,7 @@ using Microsoft.Azure.Cosmos;
 using questionplease_api_unauthentificated.Items;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 
 namespace questionplease_api_unauthentificated
 {
@@ -50,6 +51,7 @@ namespace questionplease_api_unauthentificated
                 string userAnswer = data?.answer;
 
                 string correctAnswer = await GetCorrectAnswer(questionId, log);
+                correctAnswer = WebUtility.HtmlDecode(correctAnswer);
 
                 bool isValid = IsAnswerValid(userAnswer, correctAnswer, out int points);
                 log.LogInformation($"User has correct answer for questionId {questionId} : {isValid}");
